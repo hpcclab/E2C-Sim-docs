@@ -1,3 +1,4 @@
 node_modules/*
 ui/.vscode/*
 ui/node_modules/*
+.vscode/*
