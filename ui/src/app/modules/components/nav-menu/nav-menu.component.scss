@@ -3,6 +3,7 @@
 div.outer {
     width: 80%;
     height: 70%;
+    border-right: solid 2px $black;
 
     div.scroll-nav {
         width: 100%;
@@ -11,8 +12,7 @@ div.outer {
 
         h2.section-link {
             font-family: RobotoMono;
-            color: $white;
-            -webkit-text-stroke: .5px $black;
+            color: $gray;
             font-size: 1.25vw;
 
             &:hover{
@@ -21,15 +21,14 @@ div.outer {
             }
 
             &.active {
-                text-shadow: 0px 0px 15px $lite-gray;
+                color: $red;
             }
         }
 
         h3.subsection-link {
             font-family: RobotoMono;
             font-size: 1vw;
-            color: $white;
-            -webkit-text-stroke: .5px $black;
+            color: $gray;
             padding-left: 1vw;
             margin: 0;
             margin-bottom: .5vw;
@@ -40,26 +39,25 @@ div.outer {
             }
 
             &.active {
-                text-shadow: 0px 0px 15px $lite-gray;
+                color: $red;
             }
         }
 
         h5.subsubsection-link {
             font-family: RobotoMono;
             font-size: .9vw;
-            color: $white;
-            -webkit-text-stroke: .5px $black;
+            color: $gray;
             padding-left: 2vw;
             margin: 0;
             margin-bottom: .5vw;
 
             &:hover{
                 cursor: pointer;
-                text-shadow: 0px 0px 5px $lite-gray;
             }
 
             &.active {
-                text-shadow: 0px 0px 15px $lite-gray;
+                color: $red;
+                border-left: solid 2px $red;
             }
         }
     }
