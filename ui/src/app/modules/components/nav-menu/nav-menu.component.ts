@@ -25,7 +25,7 @@ export class NavMenuComponent implements OnInit {
     {"title": "Simulating a Computing System", "link": "system", "sublinks": [
       {"subtitle": "Defining Machines", "id": "define-machines"},
       {"subtitle": "Machines' Configuration", "id": "machine-config","subsublinks": [
-        {"subsubtitle": "Heterogeneity vs Homogeneity", "id": "heter-v-homo"},
+        {"subsubtitle": "Heterogeneity vs Homogeneity", "id": "hetero-v-homo"},
         {"subsubtitle": "Expected Execution Time (EET) Matrix", "id": "eet-matrix"}
       ]},
       {"subtitle": "Scheduler", "id": "scheduler"},
