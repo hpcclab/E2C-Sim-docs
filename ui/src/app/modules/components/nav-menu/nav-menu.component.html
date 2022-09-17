@@ -1,0 +1,34 @@
+<div class="outer">
+
+    <div class="scroll-nav">
+
+        <ng-container *ngFor="let sec of sections">
+
+            <h2 class="section-link" (click)="navigate(sec.link)" [ngClass]="currentRoute(sec.link) ? 'active' : ''">
+                {{sec.title}}
+            </h2>
+    
+                <ng-container *ngIf="currentRoute(sec.link)">
+                    <ng-container *ngFor="let sub of sec.sublinks">
+    
+                        <h3 class="subsection-link" (click)="tagnav(sec.link, sub.id)" [ngClass]="currentRoute(sub.id) ? 'active' : ''">
+                            - {{sub.subtitle}}
+                        </h3>
+    
+                            <ng-container *ngFor="let subsub of sub.subsublinks">
+        
+                                <h5 class="subsubsection-link" (click)="tagnav(sec.link, subsub.id)" [ngClass]="currentRoute(subsub.id) ? 'active' : ''">
+                                    + {{subsub.subsubtitle}}
+                                </h5>
+    
+                            </ng-container>
+
+                    </ng-container>
+                    
+                </ng-container>
+
+        </ng-container>
+
+    </div>
+
+</div>
