@@ -20,7 +20,7 @@ function build(){
 
 function copyFile(){
   echo "Copying index.html to 404.html..."
-  cd "./docs"
+  cd "../docs"
   echo "=> Navigated to $(pwd)"
   cp index.html 404.html &
   wait
