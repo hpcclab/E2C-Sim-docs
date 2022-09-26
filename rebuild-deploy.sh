@@ -2,7 +2,7 @@
 
 function pull(){
   echo "Pulling from master..."
-  cd "/home/theokoles/Projects/Angular/E2C-Sim-docs/"
+  cd "./"
   echo "=> Navigated to $(pwd)"
   git pull origin main &
   wait
@@ -11,7 +11,7 @@ function pull(){
 
 function build(){
   echo "Executing build..."
-  cd "/home/theokoles/Projects/Angular/E2C-Sim-docs/ui/"
+  cd "./ui/"
   echo "=> Navigated to $(pwd)"
   ng build --output-path ../docs --base-href /E2C-Sim-docs/ &
   wait
@@ -20,7 +20,7 @@ function build(){
 
 function copyFile(){
   echo "Copying index.html to 404.html..."
-  cd "/home/theokoles/Projects/Angular/E2C-Sim-docs/docs"
+  cd "./docs"
   echo "=> Navigated to $(pwd)"
   cp index.html 404.html &
   wait
@@ -29,7 +29,7 @@ function copyFile(){
 
 function commit(){
   echo "Committing build to branch..."
-  cd "/home/theokoles/Projects/Angular/E2C-Sim-docs/"
+  cd "./"
   echo "=> Navigated to $(pwd)"
   git status & wait
   git add . & wait
@@ -43,7 +43,7 @@ function commit(){
 
 function push(){
   echo "Pushing to repository..."
-  cd "/home/theokoles/Projects/Angular/E2C-Sim-docs/"
+  cd "./"
   echo "=> Navigated to $(pwd)"
   git push origin prod & wait
   echo "=> Push complete! -----------------------------"
