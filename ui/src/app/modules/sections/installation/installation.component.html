@@ -4,31 +4,51 @@
 
         <h1 class="section-title">Installation Guide</h1>
 
-        <p class="section-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <p class="section-body">  </p>
+            <ol class="section-body"> 
+                <li> 
+                    Download Anaconda from https://www.anaconda.com/products/distribution and follow the installation instructions (https://docs.anaconda.com/anaconda/install/). Once the installation is complete, make sure to restart your terminal.
 
-        <p class="section-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+                </li>
+
+                <li> 
+                    Clone the repository: <code> git clone https://github.com/hpcclab/E2C-Sim.git </code>
+                </li>
+
+                <li> From the E2C-Sim/V1 directory, run the following command to install required packages. 
+                    <code>conda env create -f environment.yml</code>
+                     (Note: Linux users may need to run conda env export --no-builds > environment.yml prior)
+                </li>
+            <li> Activate the environment in Anaconda Prompt: <code> conda activate simulator </code>
+            </li>
+            <li> Within the V1 directory, you can run <code> python main_gui.py </code>
+            </li>
+            <li>To change the config of the machines and task types, open config.json and add new task types in the same format present and increase or decrease the amount of each machine present as well as add new machine types etc also in the format present.
+            Once the desired changes have been made, save the changed files and run python main_gui.py to see the results in the window.
+           </li>
+           
+
+
+            </ol>
+            <p class="section-body"> Note: if you have errors involving any packages such as pandas, pyqt, matplotlib, etc. open the Anaconda Navigator to ensure they are applied to the simulator environment. </p>
+            
+            
+
+       
+
+       
 
         <h3 class="sub-section-title" id="windows-install">Windows</h3>
 
-        <p class="section-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        
 
         <h3 class="sub-section-title" id="mac-install">MacOS</h3>
 
-        <p class="section-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        
 
         <h3 class="sub-section-title" id="linux-install">Linux</h3>
 
-        <p class="section-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+       
 
     </div>
 
