@@ -14,15 +14,36 @@ div.outer{
         overflow-y: scroll;
 
         h1.section-title{
-            font-family: Roboto, sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
             color: $gray;
-            font-size: 3em;
+            font-size: 2em;
+        }
+
+        h2.section-title{
+            font-family: 'Source Sans Pro', sans-serif;
+            color: $gray;
+            font-size: 1.5em;
         }
 
         p.section-body{
-            font-family: Roboto, sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
             color: $gray;
-            font-size: 1.25em;
+            font-size: 1.0em;
+            line-height: 1.5em;
+        }
+        ol.section-body{
+            font-family: 'Source Sans Pro', sans-serif;
+            color: $gray;
+            font-size: 1.0em;
+            line-height: 1.5em;
+
+        }
+        ul.section-body{
+            font-family: 'Source Sans Pro', sans-serif;
+            color: $gray;
+            font-size: 1.0em;
+            line-height: 1.5em;
+
         }
     }
 }
