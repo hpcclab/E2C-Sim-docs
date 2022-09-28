@@ -5,21 +5,53 @@
         <h1 class="section-title">Quick Start</h1>
 
         <p class="section-body">
-            This is the E2C Simulator interface:
-            <br clear="all" /> 
+            The first step to start the <i><b>E<sup>2</sup>C</b></i> application is to change the working directory to the repository location. Next, you should type the below command in terminal or Anaconda Prompt (Windows) to activate the <code class="newline">simulator</code> environment:
+        </p>
+            <div class="code">
+                <code class="newline">
+                    conda activate simulator
+                </code>
+            </div>
+        <p class="section-body">
+            To access the <code class="newline">main.py</code> module, navigate to <code class="newline">E2C-Sim/V1/</code> folder. Then, type the follwoing command in terminal to start the <i><b>E<sup>2</sup>C</b></i> applications: <br>
+        </p>
+            <div class="code">
+                <code class="newline">
+                    python main.py
+                </code>
+            </div>
+        <p class="section-body">
             
+            The application interface appears as shown in figure below: <br> <br>
             <img src="assets/images/e2c_overview.png"
                 width = 90%
                 height = auto />
             
             <br clear="all" />
-
-            Click on <b> “Workload” </b>to load expected execution times and workload CSV files.
-            Based on the scheduling method, you can change the size of machine queue by clicking on the white outer frame around the machine queues. Note that for immediate scheduling policies, the machine queue size must be unlimited.
-            You can also change the scheduling policy with the icon in the middle. The blue circles to the right represent the machines present. Clicking one will give information about that specific machine, which updates during the processing of the workload. The trash icons represent canceled and missed tasks. 
-            The reports and help menu are found at the top left, and you may choose to save a report as a CSV file once the workload has been completed.
-
+            The application interface constitutes of four parttions: 
+           
         </p>
+            <ol class="section-body">
+                <li> <b>Graphic View </b>: The schematic of the system components are shown here. In addition, processing the workload is animating in this view part. Note that the components in Graphic View are clickable. </li>
+                <li> <b>Right Dock:</b> Once a user click on a selectable component in Graphic View, the related information is shown in the Right Dock.</li>
+                <li> <b>Play Control:</b> It contains the control buttons that enable the user to start, pause, or incremental step forward the animation. In additon, the user can use the reset button to reset the system settings to default values. </li>
+                <li> <b>Menubar:</b> The user can have access to the reports via Report menu. Also, a general information about the <b><i>E<sup>2</sup>C</i></b> can be found in Help menu.</li>
+
+            </ol>        
+        <h2 class="section-title"> System Components</h2>
+        <p class="section-body"> </p>
+            <ul class="section-body">
+                <li><b>Workload</b></li>
+                <li><b>Scheduler</b></li>
+                <li><b>Machine Queue</b></li>
+                <li><b>Machine</b></li>
+                <li><b>Task</b></li>
+
+            </ul>
+       
+            
+
+        
 
         
 

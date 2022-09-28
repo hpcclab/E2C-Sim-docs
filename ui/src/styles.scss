@@ -8,6 +8,29 @@
     font-style: normal;
   }
 
+  div.code{
+    background-color: lightgray;
+    width: 90%;
+    padding: 0.2em;
+    border-radius: 0.2em;
+
+    code{
+      color:red;
+    }
+  }
+
+  code{
+    background-color: lightgray;
+    color: red;
+    padding: 0.1em;
+    border-radius: 0.2em;
+
+    &.newline{
+      min-width: 90%;
+    }
+
+  }
+
 // Color Palette
 $black: #111;
 $midnite: #123;
