@@ -24,19 +24,19 @@ div.outer{
             align-items: center;
 
             img.logo{
-                width: 8em;
-                height: 5em;
+                width: 11em;
+                height: 4em;                
             }
 
             h1.title{
-                font-family: RobotoMono;
-                color: $dark-gray;
-                vertical-align: middle;
+                font-family: 'Source Sans Pro', sans-serif;
+                color: black;                              
+                vertical-align:center ;
             }
 
             a{
-                color: $dark-gray;
-                font-size: 2vw;
+                color: black;
+                font-size: 2vw;                              
             }
         }
     }

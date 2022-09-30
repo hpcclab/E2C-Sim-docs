@@ -15,14 +15,15 @@ div.outer{
 
         h1.section-title{
             font-family: Roboto, sans-serif;
-            color: $gray;
+            color: black;
             font-size: 3em;
         }
 
         p.section-body{
             font-family: Roboto, sans-serif;
-            color: $gray;
+            color: black;
             font-size: 1.25em;
+            line-height: 1.5em;
         }
     }
 }
