@@ -1,0 +1,75 @@
+<div  class="container-fluid header"> 
+    
+    <!-- [ngStyle]="{'box-shadow': DocHideToggle[0]? '0px 0px 0px #8e8e8ffd' : '0px 2px 2px #8e8e8ffd' }"> -->
+    
+    <nav class="navbar navbar-expand-sm ">
+
+        <div  class="container-fluid left-logo">
+
+            <button class="btn" type="button" (click)="toggleSidebar()" >            
+                <i class="fa-solid fa-bars fa-2x"></i>    
+                           
+            </button>
+
+            <a class="navbar-brand" routerLink="/about">
+                <img src="../../../assets/images/E2C-1.png" alt="E2C.png" height="70" >                 
+            </a>
+
+           
+
+
+        </div>
+
+        <div class="container-fluid menu-items">            
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </button>            
+
+            <div class="collapse navbar-collapse justify-content-center" id="menu">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <button class="btn" type="button"  (click)="toggleSidebar()" >                                            
+                            Documentation           
+                        </button> 
+                    </li>
+                    <!-- <li class="nav-item">                       
+                            <button class="btn" type="button" routerLink='/docs' (click)="toggleSidebar()" >                                            
+                                Documentation           
+                            </button>                       
+                    </li> -->
+                    <li class="nav-item">
+                        <button class="btn" type="button" routerLink="about" (click)="clickHideDoc()" >About</button>
+                    </li>                    
+                </ul>
+
+                <div class="columns">                
+                    <div class="navbar-text">
+                        <a class="collapse navbar-collapse nav-link" target="_blank" rel="noopener noreferrer" href="https://github.com/hpcclab/E2C-Sim">
+                            <i class="fa-brands fa-github fa-2x"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-text">
+                        <a class="collapse navbar-collapse nav-link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCEfMrZZXkr2ordj9vu97ltQ/featured">
+                            <i class="fa-brands fa-youtube fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>      
+        
+
+        <div class="navbar-text">
+            <a class="collapse navbar-collapse nav-link" target="_blank" rel="noopener noreferrer" href="https://hpcclab.org">
+              <img src="../../../assets/images/HPCCLab-Logo.png" alt="HPCCLab.png" height="60" >
+            </a>
+        </div>
+    </nav>
+</div>
+
+
+
+

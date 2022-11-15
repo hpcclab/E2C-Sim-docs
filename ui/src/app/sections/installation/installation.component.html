@@ -1,0 +1,61 @@
+<div class="outer">
+
+    <div class="scroll-window">
+
+        <h1 class="section-title">Installation Guide</h1>
+
+        <p class="section-body">  </p>
+            <ol class="section-body"> 
+                <li> 
+                    Download Anaconda from https://www.anaconda.com/products/distribution and follow the installation instructions (https://docs.anaconda.com/anaconda/install/). Once the installation is complete, make sure to restart your terminal.
+
+                </li>
+
+                <li> 
+                    Clone the repository:
+                    <div class="code">
+                        <code class="newline"> git clone https://github.com/hpcclab/E2C-Sim.git </code>
+                    </div>
+                </li>
+                
+                <li> In this step, you create a new environment via conda and name it <code class="newline">simulator</code>. For this purpose, open terminal (or Anaconda Prompt for Winodws user) and type the below command:<br>
+                    <div class="code">
+                        <code class="newline">
+                            conda create --name simulator python=3.9
+                        </code>
+                    </div>
+                    Note that the python version in simulator environment is 3.9.
+
+                </li>
+
+                <li> Activate the simulator environment in terminal (or Anaconda Prompt for Winodws users) as follows:<br>
+                    <div class="code">
+                        <code class="newline"> conda activate simulator</code>
+                    </div>                     
+                </li>
+            <li> Install the latest version of <code class="newline">pip</code> in simulator environment as follows:<br>
+                <div class="code">
+                    <code class="newline"> conda install -c anaconda pip </code>
+                </div>
+            </li>
+
+            <li> Then, you can use <code class="newline">requirements.txt</code> file to install required dependencies via <code class="newline">pip</code>:<br>
+                <div class="code">
+                    <code class="newline"> pip install -r requirements.txt </code>
+                </div>
+            </li>
+
+            <li> Navigate to the <code class="newline">E2C-Sim/V1</code> directory. Then, run the <code class="newline">main.py</code> within the V1 directory in <code class="newline">simulator</code> environemnt:<br>
+                <div class="code">
+                    <code class="newline"> python main.py </code>
+                </div>
+            </li>
+            <li>To change the config of the machines and task types, open config.json and add new task types in the same format present and increase or decrease the amount of each machine present as well as add new machine types etc also in the format present.
+            Once the desired changes have been made, save the changed files and run python main.py to see the results in the window.
+           </li>
+            </ol>
+    </div>
+    
+
+</div>
+

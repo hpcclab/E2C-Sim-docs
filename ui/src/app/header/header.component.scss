@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@1,8..144,100&display=swap');
+
+.header{
+    position: relative;
+    // background-color: #1976d2;    
+    background: linear-gradient(271deg,rgb(13,71,161),#42a5f5);    
+    padding: 0px;
+    // box-shadow: 0px 2px 2px #8e8e8ffd ;
+    z-index:1;
+    
+    
+
+    
+    .navbar{
+        // background-color: red;        
+        padding:0px;
+        display: flex;
+        justify-content: space-between;
+        
+        
+         
+        .left-logo{
+            // background-color: beige;            
+            margin:0px;
+            display: flex;
+            flex-basis: 0;
+            padding:0px;
+
+            .navbar-brand{
+                margin-right: 0px;                
+            }
+            
+            .btn{
+                margin:0px;
+                color:rgb(253, 253, 226);
+                border:none;
+                
+            }
+        }
+
+        .menu-items{
+            // background-color: aquamarine;
+            // position: relative;
+            display: flex;
+           
+
+            .navbar-toggler{
+                color:white;
+                border: none;
+                padding: 0px;
+                margin:0px;                
+            }
+
+            div ul li {
+                margin:0px;
+                display:flex;
+
+                *{
+                
+                color:white;
+                font-family: 'Roboto', sans-serif;    
+                font-size: larger;           
+                
+                }
+            }
+
+
+
+            .columns{
+                // position:absolute;
+                display: flex;
+                align-items:flex-end;
+                margin-left:20px; 
+                padding:0px 0px 0px 10px;                       
+                border-left: solid 3px white;         
+                .navbar-text{                    
+                    padding:5px;
+                    margin:0px;
+                    >a{                
+                        color:white;                
+                    }
+                }
+            }
+                
+        
+        }
+
+    }
+    
+    
+}
+
