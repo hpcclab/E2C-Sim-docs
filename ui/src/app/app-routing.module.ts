@@ -29,9 +29,9 @@ import { SimOverviewComponent } from './sections/simulation/sim-overview/sim-ove
 
 
 const routes: Routes = [  
-  {path:'about', component:AboutComponent},
+  {path:'', component:AboutComponent},
   {path:'docs', component:SidebarComponent},
-  {path:'', redirectTo:'about', pathMatch:'full'},   
+  // {path:'', redirectTo:'about', pathMatch:'full'},   
   // {path:'docs', component:SidebarComponent},  
   {path:'installation', component:InstallationComponent},
   {path:'generating-workload/arrival-times', component:ArrivalTimesComponent},
