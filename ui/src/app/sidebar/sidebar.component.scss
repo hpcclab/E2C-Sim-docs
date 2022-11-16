@@ -83,14 +83,14 @@
     .dropdown-toggle::after {    
         position: absolute;
         border: none!important;
-        font-family: 'Font Awesome 5 free';
+        font-family: 'Font Awesome 6 free';
         content: "\f107";
         color:#3f3f3f;    
         right: 20px; 
     }
     
     .dropdown-toggle.collapsed:after{
-        font-family: 'Font Awesome 5 free';
+        font-family: 'Font Awesome 6 free';
         content: "\f105";         
     }
 }
