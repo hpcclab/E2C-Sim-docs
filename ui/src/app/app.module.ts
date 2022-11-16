@@ -38,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { SimOverviewComponent } from './sections/simulation/sim-overview/sim-overview.component';
 import { FullReportComponent } from './sections/reports/full-report/full-report.component';
+import { WelcomeComponent } from './sections/welcome/welcome.component';
 
 
 
@@ -75,7 +76,8 @@ import { FullReportComponent } from './sections/reports/full-report/full-report.
     MachineReportComponent,
     FooterComponent,
     SimOverviewComponent,
-    FullReportComponent,   
+    FullReportComponent,
+    WelcomeComponent,   
   ],
   imports: [
     BrowserModule,
