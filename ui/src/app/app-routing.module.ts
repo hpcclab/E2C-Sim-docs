@@ -29,9 +29,9 @@ import { SimOverviewComponent } from './sections/simulation/sim-overview/sim-ove
 
 
 const routes: Routes = [  
-  {path:'', component:AboutComponent},
+  {path:'about', component:AboutComponent},
   {path:'docs', component:SidebarComponent},
-  // {path:'', redirectTo:'about', pathMatch:'full'},   
+  {path:'', redirectTo:'about', pathMatch:'full'},   
   // {path:'docs', component:SidebarComponent},  
   {path:'installation', component:InstallationComponent},
   {path:'generating-workload/arrival-times', component:ArrivalTimesComponent},
@@ -57,7 +57,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
