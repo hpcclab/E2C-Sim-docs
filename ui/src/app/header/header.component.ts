@@ -18,7 +18,9 @@ export class HeaderComponent implements OnInit {
   @Output() onClickHideDoc = new EventEmitter<boolean[]>();
   
   
-  ngOnInit(): void {  }
+  ngOnInit(): void { 
+    this.toggleSidebar()
+   }
 
   toggleSidebar(){    
     let isDocHidden = false;

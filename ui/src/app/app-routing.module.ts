@@ -26,12 +26,13 @@ import { ExistingPoliciesComponent } from './sections/scheduling-policies/existi
 import { RlPoliciyComponent } from './sections/scheduling-policies/rl-policiy/rl-policiy.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SimOverviewComponent } from './sections/simulation/sim-overview/sim-overview.component';
+import { WelcomeComponent } from './sections/welcome/welcome.component';
 
-
-const routes: Routes = [  
+const routes: Routes = [ 
+  {path: '', component:WelcomeComponent}, 
   {path:'about', component:AboutComponent},
   {path:'docs', component:SidebarComponent},
-  {path:'', redirectTo:'about', pathMatch:'full'},   
+  // {path:'', redirectTo:'about', pathMatch:'full'},   
   // {path:'docs', component:SidebarComponent},  
   {path:'installation', component:InstallationComponent},
   {path:'generating-workload/arrival-times', component:ArrivalTimesComponent},
@@ -57,7 +58,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

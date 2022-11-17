@@ -90,6 +90,7 @@
     }
     
     .dropdown-toggle.collapsed:after{
+        font-family: 'FontAwesome';
         content: "\f105";         
     }
 }
