@@ -1,20 +1,12 @@
-.wrapper {   
-    // display: grid;
-    // grid-template-columns: 1fr 10fr 1fr ;
-    // display: flex;
-    // position:relative; 
-    // flex-direction: row;
-    // flex-grow: 1;
-    // flex-flow: row;
-    // width: 20%;
-    // position: fixed;
-    // top:80px;
+.wrapper {
     display: flex;
     align-items: top;
     
     height:100vh;
     padding: 0px;
     margin:0px;    
+    position: fixed;
+    margin-top: 5em;
    
     
    
@@ -34,10 +26,6 @@
         padding-bottom: 20px; 
         padding-top: 20px;
         border-right:solid 1px #bbbbbb;
-        // position:fixed;
-        // top:80px;
-        // z-index:0;
-        // bottom:100px;
         
         
         
@@ -103,11 +91,8 @@
     background-color: rgb(255, 255, 255);           
     color: #0f0f0f;
     padding:0px;
-    // margin:0px;
-    // padding-left: 25px;
-    text-decoration: none; 
-    // z-index:2;
-    
+    text-decoration: none;
+    overflow-y: scroll;
     
 }
 
