@@ -1,0 +1,98 @@
+<div class="outer">
+    <h1>Machines</h1>
+    <div class="scroll-window">
+        <p>
+            Machines in this simulator are analogous to the individual machines that make up a computer cluster. They can be heterogeneous or homogeneous machines. If machines are homogeneous, during the simulation run time they will appear as the same color.
+        </p>
+
+        <img class="img-center" src="assets/images/machines.PNG" alt="machines.png" height="300px">
+
+        <p>If the system is heterogeneous, the machines will appear as different colors during the run time.
+        </p>
+
+        <img src="assets/images/hetmachines.PNG" class="img-center" height="300px">
+        <p>More details about heterogeneity and homogeneity are given below in the Machine Configuration section.
+        </p>    
+
+        <div>
+            <p>If you click on the circle icon that represents a machine, you may view its:</p>
+            <ul>
+
+                <li>ID (identification number) </li>
+                <li>Power</li>
+                <li>Queue Size (how many tasks total can fit in the machine queue - more details about Queue Sizes are in the Machine Queues section below)</li>
+
+            </ul>
+
+            <img src="assets/images/machineinfo.PNG" class="img-center">
+
+            <p>You can also view each machines performance during the simulation run time, which includes:
+            </p>
+            <ul>
+                <li>
+                    # of Assigned Tasks (how many tasks a machine has been assigned so far throughout the simulation)
+                </li>
+                <li>
+                    # of Completed Tasks (how many tasks a machine has successfully completed throughout the simulation)
+
+                </li>
+                <li>
+                    # of Missed Tasks (how many tasks a machine has missed the deadline to complete throughout the simulation)
+
+                </li>
+
+                <li>
+                    Energy Usage (consumed energy by the machine)
+                </li>
+
+                <li>
+                    Wasted Energy (energy wasted working on tasks that missed their deadline) 
+                </li>
+                <li>Idle Energy Usage
+                </li>
+            </ul>
+
+            <img src="assets/images/machineperf.PNG" class="img-center">
+            During the simulation run time, if a task is currently allotted to a machine, you can click the square icon representing the task to get more information about it.
+
+        </div>
+
+        <div>
+            <h3>Machine Configuration</h3>
+            <ol>
+                <li>
+                    <h4>Heterogeneity vs Homogeneity</h4>
+                    <p>
+                        A group of machines can be a heterogeneous or homogeneous system.
+
+                    </p>
+                    <p>
+                        A heterogeneous system is one composed of different machines. In the real world, this would mean each machine having different hardware or software. This is reflected in the simulator by each machine icon having different colors, and reflected in the EET (detailed below) in that tasks have different expected execution times for different machines.
+
+                    </p>
+
+                    <p>
+                        A homogeneous system means that all machines in the system are identical. This is represented in the simulator by each machine icon being the same color. In the EET, any given task will have the same expected execution times across all machines.
+                    </p>
+
+                    <p>
+                        A heterogeneous system may have homogeneous machines within it, e.g. multiple machines are identical to each other but some of the machines differ.
+
+                    </p>
+                </li>
+
+                <li>
+                    <h4>Expected Execution Time (EET) Matrix
+                    </h4>
+                    The EET Matrix shows what task types are present in the current workload, and their respective expected execution times for each machine present.
+                    You may view and change the EET matrix by clicking on the Workload icon. To load a new EET file, click “Load,” and choose an appropriate CSV file. Be sure to also press “Submit” at the bottom. You will receive an error if the workload and EET formats are not compatible, e.g. there exists a task type in the workload not present in the EET.
+                    You may also edit individual EET values by clicking “Edit,” and then double-clicking the value you wish to change. Be sure to submit any changes.
+
+                    <img src="assets/images/eet.PNG" class="img-center">
+
+                </li>
+            </ol>
+        </div>
+    
+    </div>
+</div>

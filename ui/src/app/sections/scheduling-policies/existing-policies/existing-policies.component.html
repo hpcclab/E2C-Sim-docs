@@ -1,0 +1,59 @@
+<div class="outer">
+    <div class="scroll-window">
+        <h1>Scheduling Policies</h1>
+        <p>
+            Incoming tasks to be completed first arrive at the scheduler before moving onto a specific machine. A scheduling policy is the method that the scheduler decides which machine to submit each task to. There are various scheduling policies that work in different ways, the main two categories being either immediate or batch scheduling, which are described in the next section, Describing Existing Policies. scheduling policies, the machine queue size is automatically set to unlimited and cannot be altered.
+        </p>
+        <img src="assets/images/schedpolicies.PNG" class="img-center" width="500px">
+
+        <h2>Describing Existing Policies</h2>
+
+        <h4>Immediate Scheduling</h4>
+        <p>
+            An immediate scheduling policy is such that incoming tasks are submitted to a machine immediately without waiting, unless all machine queues are full (machine queue details are above in the Simulating a Computing System section).
+
+        </p>
+
+        <ul>
+            <li>
+                <b>FCFS -</b> 
+                In First Come First Serve, tasks are submitted to the first available (unoccupied) machine. If all machines are occupied, tasks will be placed in the machine queues in the order that the machines appear.
+            </li>
+
+            <li>
+                <b>MEET -</b>
+                This scheduling policy assigns a task to which machine it has the shortest expected execution time on, regardless of the number of other tasks waiting in that machine’s queue. Execution time is how long a task takes to run on a machine with no prior factors involved.
+
+            </li>
+
+            <li>
+                <b>MECT -</b>
+                This scheduling policy accounts for both the execution time of a task on all machines but also how long it would take to be completed from the moment it is assigned. For example, a task may have a shorter completion time on a machine that takes 10 time units to execute and has a small waiting queue, rather than a machine that takes only 5 time units to execute but has a large waiting queue full of other tasks. It is a smarter version of MEET.
+
+            </li>
+        </ul>
+
+        <h4> Batch Scheduing</h4>
+
+        <ul>
+            <li>
+                <b>MM -</b>
+                In Minimum Completion-Minimum Completion scheduling, the minimum execution time of each task for each given machine is determined. Then, among each tasks’ shortest execution time out of all machines, the shortest one will be submitted to that machine first.
+
+            </li>
+
+            <li>
+                <b>MSD -</b>
+                In Minimum Completion-Soonest Deadline scheduling, first, the minimum execution time of each task for each given machine is determined. Then, the task that has the soonest upcoming deadline is submitted first to the machine it will execute in the shortest time on.
+
+            </li>
+
+            <li>
+                <b>MMU -</b>
+                In Minimum Completion-Max Urgency, first, the minimum execution time of each task for each given machine is determined. Then, the machine with the greatest urgency, which is determined by ( 1 / deadline - execution time ) will be submitted first, to the machine it will execute in the shortest time on (an urgency with a higher number value is more relaxed, and an urgency with a lower number value is more urgent and will be submitted before the higher values).
+
+            </li>
+        </ul>
+        
+    </div>
+</div>

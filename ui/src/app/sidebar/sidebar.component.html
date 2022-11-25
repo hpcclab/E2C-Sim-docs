@@ -1,0 +1,119 @@
+<div class="containder-fluid wrapper" > 
+    <nav  id="sidebar"  [class]="isActiveSidebar?'deactive':'active'" [hidden]="isDocHidden"> 
+        <!-- <nav id="sidebar" [hidden]="hiddenSidebar">  -->
+            <ul class="list-unstyled components navbar-nav-scroll" >            
+                <li>                
+                    <a class="nav-link" routerLink="/about" routerLinkActive="activated" >
+                        Introduction                
+                    </a>                
+                </li>
+
+
+                <li>
+                    <a class="nav-link"  routerLink='/quick-start' routerLinkActive="activated">Getting Started</a>
+                </li>
+                
+                <li>                
+                    <a class="nav-link"  routerLink='/installation' routerLinkActive="activated">Installation Guide</a>
+                </li>
+
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle collapsed" href="#generatingWLSubmenu"  data-bs-toggle="collapse" aria-expanded="false">
+                        Generating Workload
+                    </a>
+                    <ul class="collapse list-unstyled" id="generatingWLSubmenu">
+                        <li>
+                            <a class="nav-link"  routerLink='/generating-workload/workload-traces' routerLinkActive="activated">Workload</a>
+                        </li>
+
+
+                        <li>
+                            <a class="nav-link"  routerLink='/generating-workload/scenarios' routerLinkActive="activated">Defining Scenario</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  routerLink='/generating-workload/task-types' routerLinkActive="activated">Defining Task Types</a>
+                        </li>
+                        <!-- <li>
+                            <a class="nav-link"  routerLink='/generating-workload/arrival-times' routerLinkActive="activated">Setting Arrival Times</a>
+                        </li>
+                        
+                        <li>
+                            <a class="nav-link"  routerLink='/generating-workload/examples' routerLinkActive="activated">Example: Loading a Pre-Existing Trace</a>
+                        </li> -->
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle collapsed"  href="#simulatingSubmenu" data-bs-toggle="collapse" aria-expanded="false">
+                        Simulating Computing System
+                    </a>
+                    <ul class="collapse list-unstyled" id="simulatingSubmenu">
+                        <li>
+                            <a class="nav-link"  routerLink='/simulation/overview' routerLinkActive="activated">Overview</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  routerLink='/simulation/machines' routerLinkActive="activated">Defining Machines</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  routerLink='/simulation/scheduler' routerLinkActive="activated">Schedulers</a>
+                        </li>
+                        
+                        <li>
+                            <a class="nav-link"  routerLink='/simualtion/machine-queues' routerLinkActive="activated">Machine Queue</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  routerLink='/simulation/example1' routerLinkActive="activated">Example 1: Loading a Pre-Existing Homogeneous Edge System</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  routerLink='/simulation/example2' routerLinkActive="activated">Example 2: Loading a Pre-Existing Heterogeneous Edge System</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle collapsed" href="#schedulingSubmenu" data-bs-toggle="collapse" aria-expanded="false">
+                        Scheduling Policies
+                    </a>
+                    <ul class="collapse list-unstyled" id="schedulingSubmenu">
+                        <li>
+                            <a class="nav-link"  routerLink='/scheduling-policies/existing-policies' >Describing Existing Policies</a>
+                        </li>
+                        <!-- <li>
+                            <a class="nav-link"  routerLink='/scheduling-policies/developing-policies' >Developing a New Policy</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  routerLink='/scheduling-policies/rl-policy' >Example: Developing Reinforcement Learning-based Scheduler</a>
+                        </li> -->
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle collapsed"  href="#reportSubmenu" data-bs-toggle="collapse" aria-expanded="false">
+                        Reporting
+                    </a>
+                    <ul class="collapse list-unstyled" id="reportSubmenu">
+                        <li>
+                            <a class="nav-link"  routerLink='/reports/overview'>Overview Report</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  routerLink='/reports/task-report'>Task Reports</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  routerLink='/reports/machine-report'>Machine Reports</a>
+                        </li>                    
+                    </ul>
+                </li>
+                
+            </ul>
+        
+    </nav>
+
+    <div id="content" class="container-fluid">   
+        
+        <router-outlet></router-outlet>
+    </div>
+</div>
+    
+    
+
+
+   
