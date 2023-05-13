@@ -2,13 +2,221 @@
 
     <div class="scroll-window">
 
-        <h1> Workload Generation</h1>
+        <h1> Workload Generator</h1>
 
-        <p> 
-            A workload consists of scenarios, where each scenario is a group of tasks consisting of the same task type (more about scenarios and task types in the following two sections). A workload can be made of multiple scenarios, each having a different task type. The workload represents the full set of incoming tasks to be processed by the simulated machines.
 
-            
+            The workload generator is an interface built within E2C. It allows users to generate synthesized workloads via flexible configuration of the following components:
+            <ul>
+                <li>
+                    Various applications (a.k.a. <b>task types</b>) supported in the simulated system
+                </li>
+
+                <li>
+                    Various <b>machine types</b> in the simulated system
+                </li>
+
+                <li>
+                    A matrix representing expected execution time of each task type on each machine type, which is also known as the Estimated Execution Time (<b>EET</b>) matrix
+                </li>
+
+                <li>
+                    A user-defined <b>scenario</b> that explains the number and pattern of task requests generated within a given time period.
+                </li>
+            </ul>
+
+            To open the workload generator:
+            <ol>
+                <li>
+                    Open the workload right panel by clicking the “Workload” button.
+                </li>
+
+                <li>
+                    Click the button labeled “Open Workload Generator.”
+
+                </li>
+            </ol>
+            <img src="./assets/images/main.png"
+            width = 800px  height = auto />
+
+            <p>Upon opening the workload generator interface, you should see a popup menu that looks like the following image. There are five different sections of the interface as follows:</p>
+
+
+            <img src="./assets/images/tt.PNG"
+            width = 800px  height = auto />
+        <p>
+            <br>
         </p>
+        <h2> Task Types</h2>
+        From this section of the interface, you can view the currently existing task types in the table at the top. The table contains the following information about each task type:
+        <ul>
+            <li> Task Type ID </li>
+            <li>Task Type Name </li>
+            <li>Type of Input Data </li>
+            <li>Mean Data Size </li>
+            <li>Task Type Urgency (best effort task vs urgent)</li>
+            <li>Task Type Deadline</li>
+        </ul>
+You may also double click on cell entries in the table to change them via keyboard input. After making any changes this way to the table, you can press the “Submit Edit Changes” button to commit the changes you made. Make sure to submit any changes you wish to use during the simulation.
+
+Next, you may choose to add new task types. Note that the existing information in the Task Types table are just some default values. You may want to delete (some/all of) them and define your own task types. For that purpose, you need to enter the following fields:
+        <ul>
+            <li>Task Type Name </li>
+            <li>Data Input</li>
+            <li>(Optional) Create a new data input</li>
+            <li>Mean Input Data Size</li>
+            <li>Task Urgency (best effort task vs urgent)</li>
+            <li>Task Deadline</li>
+        </ul>
+After entering these fields, press the “Add” button. It will appear in the table above, and be usable for generating a workload in the later steps.
+
+Additionally, you may choose to delete any task types. Select which task type in the drop down box, and press the “Remove” button. It will disappear from the table and be unusable for the simulation.
+<p><br></p>
+<h2> Machine Types</h2>
+
+From this section of the interface, you can view some default existing machine types in the table at the top. Each machine type contains the following information:
+        <ul>
+            <li>Machine Type Name </li>
+            <li>Power </li>
+            <li>Idle Power </li>
+            <li>Number of Replicas of that machine type in the simulated system</li>
+        </ul>
+
+        <img src="./assets/images/mt.PNG"
+        width = 800px  height = auto />
+
+<p>By double clicking any cell entries, you may also choose to edit them. </p>
+
+You can also add new machine types, just as with task types. Adding a machine type will require input to the following fields:
+
+        <ul>
+            <li>Machine Type Name </li>
+            <li>Power </li>
+            <li>Idle Power </li>
+            <li>Number of Replicas of that machine type in the simulated system</li>
+        </ul>
+
+
+Once finished filling these fields out, press the “Add” button.
+
+You can also choose to remove existing machine types by selecting any of them in the drop down menu, then press the “Remove” button.
+
+After you have configured your task and machine types as desired, you can press the “Save Config” button to save as a configuration JSON file in the directory of your choosing. This file defines task and machine type information and is to be loaded in for the simulation. The process for this will be explained in a later section.
+<p><br></p>
+<h2> Scenario </h2>
+
+Once you define the task types and machine types for your simulation, you can generate a workload through defining a scenario. The scenario defines the circumstance based on which you want to generate the workload. As an example in the context of an IoT and Edge computing system for drones,  a scenario can be defined as the flight period with different operations (object detection, motion detection, etc.) as task types within this period of time.
+A scenario consists of multiple “bags” (sets) of tasks. Each set of tasks are instances of a task type previously defined. Each task in that set has its own arrival time. These arrival times are mapped across a statistical distribution (such as exponential, uniform, normal, spiky, etc.) which span a user-input start time and end time.
+You can view the currently existing scenario (empty by default) at the top of the snapshot or define a new scenario using the fields at the bottom of the form. It includes the following information:
+        <ul>
+            <li>Task Type </li>
+            <li>Number of Tasks of that type </li>
+            <li>Start Time (the time that the first instance of that task type arrives)  </li>
+            <li>End Time (the time that the last instance of that task type arrives) </li>
+            <li>End Time </li>
+            <li>Statistical Distribution of Task Arrival </li>
+        </ul>
+
+        <img src="./assets/images/scen.PNG"
+        width = 800px  height = auto />
+<p> Once the user has input these fields, they may press the “Add” button. This will display the newly added subset in the table at the top. The user may add as many subsets in this way as they choose before generating the workload. Note that not all task types previously defined have to be in the scenario.</p>
+
+Once the user is satisfied with their created scenario, they can press the “Generate Workload for this Scenario” button. This will generate a workload consisting of tasks, which can be seen in the next section, “Workload.”
+<p>
+<b> Hint: Note that generating a workload is a required step before starting a simulation.</b>
+</p>
+
+<p><br></p>
+<h2> Workload </h2>
+The workload section displays all the task requests (or simply “tasks”) generated by the scenario. Note that this section is only enabled after a scenario is created, and the “Generate Workload for this Scenario” button is pressed. You can see the following data about all tasks in your workload:
+    <ul>
+        <li>Task Type </li>
+        <li>Task Data Size</li>
+        <li>Task Arrival Time </li>
+        <li>Task Deadline </li>
+    </ul>
+
+    <img src="./assets/images/wkl.PNG"
+        width = 800px  height = auto />
+
+<p>
+    Note 1:  the data size is based around the average, or mean data size that is defined by that task’s type. For example, if a task type’s data size is 10.0 Kb, you can expect all tasks in the workload of that task type to be similarly close in data size.
+</p>
+
+<p>
+    Note 2: the task deadline in the workload table is equal to (arrival time + slack), the slack being a property of that task’s type previously defined.
+</p>
+
+After a workload is generated, you can save the workload data as a CSV file (with .wkl extension) by clicking the “Save as CSV File” button and choosing a directory to save it to. The workload can be retrieved at a later time to run the simulation against.
+
+
+<p><br></p>
+<h2> Expected Execution Time (EET) Matrix </h2>
+In this section of the interface, you can see the EET table (matrix) that displays the expected execution times of each task across each machine type in the simulated system. Note that the previously defined task types are located on the left side of the table, and the machine types at the top. These change depending on your configuration in the previous Task Types and Machine Types sections.
+
+By default, expected execution times are 0, but can be configured by the user. To do this, double click cell entries and use the keyboard to change them.
+
+There is also a button labeled “Reset,” which will convert all values in the EET back to 0.
+
+You can then save this as a CSV file (with “.eet” extension) by clicking “Save as CSV File” and choosing a directory to save it to.
+
+Since this is the final section of the menu, you can also close it from here with the “Close” button, or it can be closed from any section with the traditional close window button found at the top right of the window. The window can be reopened at any time by clicking the “Generate New Workload” button as done before.
+
+<p>
+<img src="./assets/images/eet.PNG"
+        width = 800px  height = auto />
+
+</p>
+
+<h2>Loading Files </h2>
+Using saved CSV files for EET, Workload, and Config, the user may load these files into the simulator to run a simulation.
+
+As defined in previous sections:
+    <ul>
+        <li>
+            EET defines task types expected execution times across machines
+        </li>
+
+        <li>
+            workload contains all tasks present for the simulation
+        </li>
+
+        <li>
+            config includes necessary information about task and machine types.
+        </li>
+
+    </ul>
+
+    <p>
+        <img src="./assets/images/img2.png"
+        width = 800px  height = auto />
+    </p>
+
+The steps for loading and submitting files to run a simulation is as follows:
+<ol>
+    <li>
+        Press the “Load” button underneath the EET table to load an EET csv file
+    </li>
+
+    <li>
+        Press the “Load” button underneath the workload table to load a workload csv file
+
+    </li>
+
+    <li>
+        Press the “Load Config” button to load a config JSON file
+    </li>
+
+    <li>
+        Press the “Submit Workload and EET” button to submit all aforementioned files loaded to ready the simulation
+    </li>
+
+</ol>
+
+
+<p>
+    <b> We have prepared a video that demonstrates workload generation operation within E2C. You can view the video <a href="https://youtube.com/playlist?list=PL7jhdCPVrCHh49PvIglDEY2Xs4v2ivrsw"> here.</a>
+    </b>
+</p>
 
 
     </div>
