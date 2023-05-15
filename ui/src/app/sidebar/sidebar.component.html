@@ -1,19 +1,19 @@
-<div class="containder-fluid wrapper" > 
-    <nav  id="sidebar"  [class]="isActiveSidebar?'deactive':'active'" [hidden]="isDocHidden"> 
+<div class="containder-fluid wrapper" >
+    <nav  id="sidebar"  [class]="isActiveSidebar?'deactive':'active'" [hidden]="isDocHidden">
         <!-- <nav id="sidebar" [hidden]="hiddenSidebar">  -->
-            <ul class="list-unstyled components navbar-nav-scroll" >            
-                <li>                
+            <ul class="list-unstyled components navbar-nav-scroll" >
+                <li>
                     <a class="nav-link" routerLink="/about" routerLinkActive="activated" >
-                        Introduction                
-                    </a>                
+                        Introduction
+                    </a>
                 </li>
 
 
                 <li>
                     <a class="nav-link"  routerLink='/quick-start' routerLinkActive="activated">Getting Started</a>
                 </li>
-                
-                <li>                
+
+                <li>
                     <a class="nav-link"  routerLink='/installation' routerLinkActive="activated">Installation Guide</a>
                 </li>
 
@@ -28,16 +28,16 @@
                         </li>
 
 
-                        <li>
+                        <!-- <li>
                             <a class="nav-link"  routerLink='/generating-workload/scenarios' routerLinkActive="activated">Defining Scenario</a>
                         </li>
                         <li>
                             <a class="nav-link"  routerLink='/generating-workload/task-types' routerLinkActive="activated">Defining Task Types</a>
-                        </li>
+                        </li> -->
                         <!-- <li>
                             <a class="nav-link"  routerLink='/generating-workload/arrival-times' routerLinkActive="activated">Setting Arrival Times</a>
                         </li>
-                        
+
                         <li>
                             <a class="nav-link"  routerLink='/generating-workload/examples' routerLinkActive="activated">Example: Loading a Pre-Existing Trace</a>
                         </li> -->
@@ -57,7 +57,7 @@
                         <li>
                             <a class="nav-link"  routerLink='/simulation/scheduler' routerLinkActive="activated">Schedulers</a>
                         </li>
-                        
+
                         <li>
                             <a class="nav-link"  routerLink='/simualtion/machine-queues' routerLinkActive="activated">Machine Queue</a>
                         </li>
@@ -83,7 +83,7 @@
                         <li>
                             <a class="nav-link"  routerLink='/scheduling-policies/rl-policy' >Example: Developing Reinforcement Learning-based Scheduler</a>
                         </li> -->
-                        
+
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -99,21 +99,20 @@
                         </li>
                         <li>
                             <a class="nav-link"  routerLink='/reports/machine-report'>Machine Reports</a>
-                        </li>                    
+                        </li>
                     </ul>
                 </li>
-                
+
             </ul>
-        
+
     </nav>
 
-    <div id="content" class="container-fluid">   
-        
+    <div id="content" class="container-fluid">
+
         <router-outlet></router-outlet>
     </div>
 </div>
-    
-    
 
 
-   
+
+

@@ -41,12 +41,13 @@
             <p>Upon opening the workload generator interface, you should see a popup menu that looks like the following image. There are five different sections of the interface as follows:</p>
 
 
-            <img src="./assets/images/tt.PNG"
+            <img src="./assets/images/task_types.png"
             width = 800px  height = auto />
         <p>
             <br>
         </p>
         <h2> Task Types</h2>
+        There are many tasks in a workload, which can include multiple tasks of the same type and also tasks that differ in their type. For example, a workload may have 100 tasks of type “T1,” 50 tasks of type “T2,” and so on.
         From this section of the interface, you can view the currently existing task types in the table at the top. The table contains the following information about each task type:
         <ul>
             <li> Task Type ID </li>
@@ -81,7 +82,7 @@ From this section of the interface, you can view some default existing machine t
             <li>Number of Replicas of that machine type in the simulated system</li>
         </ul>
 
-        <img src="./assets/images/mt.PNG"
+        <img src="./assets/images/machine_types.png"
         width = 800px  height = auto />
 
 <p>By double clicking any cell entries, you may also choose to edit them. </p>
@@ -106,6 +107,7 @@ After you have configured your task and machine types as desired, you can press 
 
 Once you define the task types and machine types for your simulation, you can generate a workload through defining a scenario. The scenario defines the circumstance based on which you want to generate the workload. As an example in the context of an IoT and Edge computing system for drones,  a scenario can be defined as the flight period with different operations (object detection, motion detection, etc.) as task types within this period of time.
 A scenario consists of multiple “bags” (sets) of tasks. Each set of tasks are instances of a task type previously defined. Each task in that set has its own arrival time. These arrival times are mapped across a statistical distribution (such as exponential, uniform, normal, spiky, etc.) which span a user-input start time and end time.
+Specifically, each scenario has a task type and an amount of tasks in total for that given scenario. Also, they each have a start time, an end time, and a distribution method. For example, a scenario has 20 tasks of task type “T1.” The distribution defines each individual task's arrival time, somewhere between the start and end time of that scenario.
 You can view the currently existing scenario (empty by default) at the top of the snapshot or define a new scenario using the fields at the bottom of the form. It includes the following information:
         <ul>
             <li>Task Type </li>
@@ -116,7 +118,7 @@ You can view the currently existing scenario (empty by default) at the top of th
             <li>Statistical Distribution of Task Arrival </li>
         </ul>
 
-        <img src="./assets/images/scen.PNG"
+        <img src="./assets/images/scenario.png"
         width = 800px  height = auto />
 <p> Once the user has input these fields, they may press the “Add” button. This will display the newly added subset in the table at the top. The user may add as many subsets in this way as they choose before generating the workload. Note that not all task types previously defined have to be in the scenario.</p>
 
@@ -135,7 +137,7 @@ The workload section displays all the task requests (or simply “tasks”) gene
         <li>Task Deadline </li>
     </ul>
 
-    <img src="./assets/images/wkl.PNG"
+    <img src="./assets/images/workload.png"
         width = 800px  height = auto />
 
 <p>
@@ -162,7 +164,7 @@ You can then save this as a CSV file (with “.eet” extension) by clicking “
 Since this is the final section of the menu, you can also close it from here with the “Close” button, or it can be closed from any section with the traditional close window button found at the top right of the window. The window can be reopened at any time by clicking the “Generate New Workload” button as done before.
 
 <p>
-<img src="./assets/images/eet.PNG"
+<img src="./assets/images/eet.png"
         width = 800px  height = auto />
 
 </p>
